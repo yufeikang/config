@@ -16,21 +16,19 @@ unmap('<Ctrl-i>');
 
 
 
-mapkey('F', '#7 santatoic next', function () {
-    var buttonList = document.getElementsByClassName('jsx-1583171186');
-    console.log(buttonList);
-    for (var i = 0; i < buttonList.length; i++) {
-        buttonList[i].click();
-    }
+mapkey('F', '#1 santatoic next', function () {
+    Hints.create("img, button", function (element) {
+        element.click();
+    });
 });
 
-mapkey('gi', '#1get image link and google image search', function () {
+mapkey('gi', '#2 get image link and google image search', function () {
     Hints.create("img", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
     });
 });
-mapkey('Q', '#1get qrcode link and open', function () {
+mapkey('Q', '#3 get qrcode link and open', function () {
 
     Hints.create("img, button", function (element) {
         // element.dblclick();
