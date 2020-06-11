@@ -53,6 +53,9 @@ mapkey('Q', '#3 get qrcode link and open', function () {
                 console.log(data)
                 if (data.match(urlRegex)) {
                     window.open(data)
+                } else {
+                    Clipboard.write(element.href);
+                    Front.showPopup("Look your Clipboard!")
                 }
             }
             qrcode.decode(objectURL);
