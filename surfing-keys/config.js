@@ -25,7 +25,7 @@ mapkey('F', '#7 santatoic next', function () {
 });
 
 mapkey('gi', '#1get image link and google image search', function () {
-    Hints.create("img, button", function (element) {
+    Hints.create("img", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
     });
