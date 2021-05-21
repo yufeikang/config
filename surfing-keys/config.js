@@ -92,6 +92,7 @@ mapkey('Q', '#3 get qrcode link and open', function () {
             mode: 'cors', // no-cors, cors, *same-origin
             redirect: 'follow', // manual, *follow, error
             credentials: 'same-origin',
+            cache: 'force-cache',
         }).then(function (response) {
             if (response.ok) {
                 return response.blob();
